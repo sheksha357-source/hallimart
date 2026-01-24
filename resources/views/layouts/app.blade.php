@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+</head>
+<body>
+
+    {{-- Common Header --}}
+    <!-- @include('partials.header') -->
+
+    {{-- Page Content --}}
+    <div class="container">
+        @yield('content')
+    </div>
+
+</body>
+</html>

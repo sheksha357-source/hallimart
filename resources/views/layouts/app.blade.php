@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My App</title>
+    <title>ಹಳ್ಳಿಮಾರ್ಟ್</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
 <body>
 
     {{-- Common Header --}}
-    <!-- @include('partials.header') -->
+    @include('partials.header')
 
     {{-- Page Content --}}
     <div class="container">
@@ -16,4 +16,4 @@
     </div>
 
 </body>
-</html>
+</html> 

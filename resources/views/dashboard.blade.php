@@ -17,9 +17,11 @@
             <p>You are successfully logged in.</p>
         </div>
 
-        <div class="card">
-            <h4>Session Info</h4>
-            <pre>{{ print_r(session()->all(), true) }}</pre>
+        <!-- ADD PRODUCT BUTTON -->
+        <div class="card text-center">
+            <a href="{{ route('products.create') }}" class="mall-btn">
+                🏬 Add Product
+            </a>
         </div>
     </div>
 

@@ -52,7 +52,7 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('dashboard');
-    }
+    }   
 
     return back()->with('error', 'Invalid email or password');
 }

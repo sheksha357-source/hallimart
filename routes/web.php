@@ -2,6 +2,7 @@
 
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\AuthController;
+    use App\Http\Controllers\ProductController; // ✅ ADD THIS
 
     Route::get('/', function () {
         return view('welcome');

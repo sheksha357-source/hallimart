@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="dashboard">
+<div class="product-page">
 
     <div class="form-card">
-        <h2>🏬 Add New Product</h2>
-        <p class="subtitle">Village market items – animals, grains, tools, etc.</p>
+        <h2 class="form-title">🏬 Add New Product</h2>
+        <p class="form-subtitle">Village market items – animals, grains, tools, etc.</p>
 
         @if(session('success'))
             <div class="success-msg">
@@ -13,29 +13,29 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('products.store')   }}" enctype="multipart/form-data" class="product-form">
             @csrf
 
             <div class="form-group">
-                <label>Product Name</label>
-                <input type="text" name="name" placeholder="Cow, Goat, Rice Bag" required>
+                <label class="form-label">Product Name</label>
+                <input type="text" name="name" class="form-input" placeholder="Cow, Goat, Rice Bag" required>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label>Price (₹)</label>
-                    <input type="number" name="price" placeholder="5000" required>
+                    <label class="form-label">Price (₹)</label>
+                    <input type="number" name="price" class="form-input" placeholder="5000" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Stock</label>
-                    <input type="number" name="stock" placeholder="10" required>
+                    <label class="form-label">Stock</label>
+                    <input type="number" name="stock" class="form-input" placeholder="10" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Product Image</label>
-                <input type="file" name="image" accept="image/*">
+                <label class="form-label">Product Image</label>
+                <input type="file" name="image" class="form-file" accept="image/*">
             </div>
 
             <button type="submit" class="mall-btn">

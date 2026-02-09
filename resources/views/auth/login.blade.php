@@ -1,16 +1,40 @@
-<h2>Login</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
+</head>
+<body>
 
-@if(session('error'))
-    <p style="color:red">{{ session('error') }}</p>
-@endif
+<div class="auth-container">
+    <div class="auth-card">
+        <h2 class="auth-title">Login</h2>
 
-<form method="POST" action="/login">
-    @csrf
+        @if(session('error'))
+            <p class="auth-error">{{ session('error') }}</p>
+        @endif
 
-    <input type="email" name="email" placeholder="Email"><br><br>
-    <input type="password" name="password" placeholder="Password"><br><br>
+        <form method="POST" action="/login" class="auth-form">
+            @csrf
 
-    <button type="submit">Login</button>
-</form>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
 
-<a href="/register">Create new account</a>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
+
+        <p class="auth-footer">
+            Don’t have an account?
+            <a href="/register">Create new account</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
